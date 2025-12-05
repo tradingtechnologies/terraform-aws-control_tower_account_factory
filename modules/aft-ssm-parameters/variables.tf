@@ -1,6 +1,14 @@
 # Copyright Amazon.com, Inc. or its affiliates. All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
 #
+
+# This variable is part of TT's fork.
+variable "aft_approval_notification_emails" {
+  type        = list(string)
+  description = "List of email addresses to notify for pipeline approval steps"
+  default     = []
+}
+
 variable "aft_request_queue_name" {
   type = string
 }
@@ -256,8 +264,6 @@ variable "aft_metrics_reporting" {
   type = string
 }
 
-variable "aft_approval_notification_emails" {
-  type        = list(string)
-  description = "List of email addresses to notify for pipeline approval steps"
-  default     = []
+variable "aft_codepipeline_customizations_bucket_id" {
+  type = string
 }
